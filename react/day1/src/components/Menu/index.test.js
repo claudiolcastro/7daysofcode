@@ -2,14 +2,14 @@ import { render, screen, within } from '@testing-library/react';
 import Menu from './';
 
 describe('Menu', () => {
-  test('deve renderizar logo Casa Verde', () => {
+  test('should render logo with alt text', () => {
     render(<Menu />);
 
     const logo = screen.getByAltText(/logo casa verde/i);
     expect(logo).toBeInTheDocument();
   });
 
-  test('deve ter um menu com itens', () => {
+  test('should render menu with itens', () => {
     render(<Menu />);
 
     const list = screen.getByRole("list", {

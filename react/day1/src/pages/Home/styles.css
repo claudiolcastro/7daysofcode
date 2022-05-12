@@ -1,8 +1,21 @@
 main.home {}
 
+section.home__main-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1203px;
+}
+
+div.home__newsletter {
+  position: relative;
+  top: 100px;
+}
+
 .image-home-1 {
   position: absolute;
   right: 0;
   top: 0;
   width: 50%;
+  z-index: -1;
 }

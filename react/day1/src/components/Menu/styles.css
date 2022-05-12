@@ -1,0 +1,29 @@
+header.menu {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1203px;
+  margin: 20px auto 0 auto;
+  z-index: 1;
+}
+
+div.menu__logo {
+  width: 177px;
+  height: 45px;
+}
+
+div.menu__logo img {
+  width: 100%;
+}
+
+nav.menu__nav {}
+
+nav.menu__nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav.menu__nav li {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
