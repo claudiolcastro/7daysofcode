@@ -41,6 +41,7 @@ div.newsletter__email button {
   box-shadow: 3px 3px 3px #ccc;
   box-shadow: #ccc;
   border: none;
+  cursor: pointer;
   color: #fff;
   background-color: #FFCB47;
   width: 150px;

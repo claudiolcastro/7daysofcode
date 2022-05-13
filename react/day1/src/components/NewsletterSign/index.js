@@ -1,6 +1,21 @@
 import './styles.css';
 
+import { useState } from 'react';
+import emailValidator from '../../utils/emailValidator';
+
 export default function NewsletterSign() {
+  const [email, setEmail] = useState('');
+
+  const handleButtonClick = () => {
+    const isValidEmail = emailValidator(email);
+    const message = isValidEmail ?
+      `Obrigado pela sua assinatura, você receberá nossas novidades no e-mail ${email}`
+      : 'Por favor, digite um e-mail valido';
+
+    alert(message);
+    setEmail('');
+  };
+
   return (
     <div className="newsletter">
       <h2 className="newsletter__subtitle">Sua casa com as</h2>
@@ -13,8 +28,13 @@ export default function NewsletterSign() {
       </p>
 
       <div className="newsletter__email">
-        <input type="email" placeholder="insira seu e-mail" />
-        <button>
+        <input
+          type="email"
+          placeholder="insira seu e-mail"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button name='assinar newsletter' onClick={() => handleButtonClick()}>
           Assinar newsletter
         </button>
       </div>
